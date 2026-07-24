@@ -2,16 +2,9 @@
 
 **An end-to-end clinical decision-support system that screens intraoral photographs for oral squamous cell carcinoma (OSCC) using an EfficientNet ensemble, with Grad-CAM explainability and a full patient-facing web app.**
 
-[!\[Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python\&logoColor=white)](https://www.python.org/)
-[!\[FastAPI](https://img.shields.io/badge/FastAPI-0.111-009688?logo=fastapi\&logoColor=white)](https://fastapi.tiangolo.com/)
-[!\[React](https://img.shields.io/badge/React-18-61DAFB?logo=react\&logoColor=black)](https://react.dev/)
-[!\[PyTorch](https://img.shields.io/badge/PyTorch-2.7-EE4C2C?logo=pytorch\&logoColor=white)](https://pytorch.org/)
-[!\[Supabase](https://img.shields.io/badge/Supabase-Auth%20%26%20DB-3ECF8E?logo=supabase\&logoColor=white)](https://supabase.com/)
-[!\[License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-
 > ⚠️ \*\*Medical disclaimer:\*\* This system is a research prototype and screening aid. It is \*\*not\*\* a diagnostic device and has not been clinically validated or approved by any regulatory body. It must never replace evaluation by a licensed medical professional.
 
-\---
+\
 
 ## 📌 Table of Contents
 
@@ -27,11 +20,11 @@
 10. [Installation](#-installation)
 11. [License](#-license)
 
-\---
+\
 
 ## 🎯 Problem \& Impact
 
-Oral squamous cell carcinoma (OSCC) is one of the most common head-and-neck cancers worldwide, and late diagnosis is one of the biggest drivers of poor survival outcomes. Early lesions are frequently mistaken for benign conditions during routine visual exams, and access to specialist oral pathologists is limited in many regions — meaning diagnostic accuracy often depends entirely on the experience of the examining clinician.
+Oral squamous cell carcinoma (OSCC) is the most common type of oral cancer and a major global health concern. Delayed diagnosis remains one of the leading causes of poor survival outcomes, as early-stage oral lesions often resemble benign conditions during routine oral examinations. In many regions, limited access to oral medicine specialists and oral pathologists means that accurate diagnosis frequently depends on the experience of the examining clinician.
 
 This project tackles that gap with an **automated, interpretable screening pipeline** that:
 
@@ -42,7 +35,7 @@ This project tackles that gap with an **automated, interpretable screening pipel
 
 The long-term goal is a low-cost, point-of-care screening tool that can flag high-risk lesions for further professional evaluation, particularly in settings with limited access to oral oncology specialists.
 
-\---
+\
 
 ## ✨ Key Features
 
@@ -55,7 +48,7 @@ The long-term goal is a low-cost, point-of-care screening tool that can flag hig
 * 🏥 **Nearby clinic lookup** — surfaces nearby dental/oncology care options for follow-up.
 * 🔐 **Secure auth \& storage** — Supabase-backed authentication, row-level data isolation, and signed URLs for scan images.
 
-\---
+\
 
 ## 🏗 System Architecture
 
@@ -112,7 +105,7 @@ The production backend serves an **ensemble of EfficientNet-B1 and EfficientNet-
 
 **Why an ensemble, and why B1 over B0/B2?** The accompanying research paper found a *non-linear* relationship between model capacity and diagnostic performance: EfficientNet-B0 (baseline) reached \~85% test accuracy, EfficientNet-B1 jumped to \~99% accuracy with far fewer false negatives, and EfficientNet-B2 showed early signs of overfitting with a slight performance dip. B1 was identified as the capacity "sweet spot," which is why it anchors the production ensemble.
 
-\---
+\
 
 ## 📊 Dataset
 
@@ -124,7 +117,7 @@ The production backend serves an **ensemble of EfficientNet-B1 and EfficientNet-
 
 > The dataset itself is not distributed in this repository due to patient data sensitivity. See \[Installation](#-installation) for how to plug in your own trained weights.
 
-\---
+\
 
 ## 📈 Results
 
@@ -148,19 +141,13 @@ Full methodology, comparative literature review, and error analysis are in the [
 
 |Screen|Description|
 |-|-|
-|`docs/screenshots/dashboard.png`|Home dashboard — scan trends, last scan summary, daily tip|
-|`docs/screenshots/new-scan.png`|New scan capture/upload flow|
-|`docs/screenshots/result.png`|Prediction result with risk level + Grad-CAM heatmap|
-|`docs/screenshots/history.png`|Scan history / patient timeline|
-|`docs/screenshots/chat.png`|AI health assistant chat|
+|`docs/screenshots/Dashboard.jpg`|Home dashboard — scan trends, last scan summary, daily tip|
+|`docs/screenshots/Profile-Dashboard.jpg`|New scan capture/upload flow|
+|`docs/screenshots/Result.jpg`|Prediction result with risk level + Grad-CAM heatmap|
+|`docs/screenshots/Scan-History.jpg`|Scan history / patient timeline|
+|`docs/screenshots/Oral AI Assistant.jpg`|AI health assistant chat|
 
-Embed them like this once added:
-
-```markdown
-!\[Dashboard](docs/screenshots/dashboard.png)
-```
-
-\---
+\
 
 ## 🛠 Tech Stack
 
@@ -189,14 +176,13 @@ Embed them like this once added:
 This project is grounded in the accompanying paper:
 
 **"Automated Oral Cancer Screening from Clinical Photographs Using EfficientNet-Based Transfer Learning"**
-*Isha, Harsh Tomar, Sahil Jha — Department of Computer Science and Engineering, Lovely Professional University, Punjab, India*
+*Sahil Jha, Harsh Tomar — Department of Computer Science and Engineering, Lovely Professional University, Punjab, India*
 
 The paper covers the full methodology: dataset curation, EfficientNet-B0/B1/B2 comparative scaling analysis, Grad-CAM-based interpretability, ROC/confusion-matrix evaluation, and a literature review situating this work against prior OSCC detection studies.
 
-📎 Add the PDF to the repo (e.g. `docs/paper/oral-cancer-efficientnet.pdf`) and link it here:
 
 ```markdown
-\[Read the full paper (PDF)](docs/paper/oral-cancer-efficientnet.pdf)
+[Read the full paper (PDF)](docs/paper/oral-cancer-efficientnet.pdf)
 ```
 
 If you use this work academically, please cite it — see [Citation](#-citation) below once you have finalized publication details (conference/journal, year, DOI).
@@ -275,5 +261,5 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 🙌 Acknowledgements
 
-Built by **Sahil Jha**, **Isha**, and **Harsh Tomar** — Department of Computer Science and Engineering, Lovely Professional University, Punjab, India.
+Built by **Sahil Jha**, and **Harsh Tomar** — Department of Computer Science and Engineering, Lovely Professional University, Punjab, India.
 
