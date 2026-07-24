@@ -4,7 +4,7 @@
 
 > ⚠️ \*\*Medical disclaimer:\*\* This system is a research prototype and screening aid. It is \*\*not\*\* a diagnostic device and has not been clinically validated or approved by any regulatory body. It must never replace evaluation by a licensed medical professional.
 
-\
+
 
 ## 📌 Table of Contents
 
@@ -20,7 +20,7 @@
 10. [Installation](#-installation)
 11. [License](#-license)
 
-\
+
 
 ## 🎯 Problem \& Impact
 
@@ -35,7 +35,7 @@ This project tackles that gap with an **automated, interpretable screening pipel
 
 The long-term goal is a low-cost, point-of-care screening tool that can flag high-risk lesions for further professional evaluation, particularly in settings with limited access to oral oncology specialists.
 
-\
+
 
 ## ✨ Key Features
 
@@ -48,7 +48,7 @@ The long-term goal is a low-cost, point-of-care screening tool that can flag hig
 * 🏥 **Nearby clinic lookup** — surfaces nearby dental/oncology care options for follow-up.
 * 🔐 **Secure auth \& storage** — Supabase-backed authentication, row-level data isolation, and signed URLs for scan images.
 
-\
+
 
 ## 🏗 System Architecture
 
@@ -87,7 +87,7 @@ The long-term goal is a low-cost, point-of-care screening tool that can flag hig
 5. Prediction, confidence, risk level, recommendation, and heatmap are persisted to Supabase and returned to the client.
 6. The dashboard, history, and chat features all read from this same prediction record.
 
-\---
+
 
 ## 🧠 AI Model
 
@@ -105,7 +105,7 @@ The production backend serves an **ensemble of EfficientNet-B1 and EfficientNet-
 
 **Why an ensemble, and why B1 over B0/B2?** The accompanying research paper found a *non-linear* relationship between model capacity and diagnostic performance: EfficientNet-B0 (baseline) reached \~85% test accuracy, EfficientNet-B1 jumped to \~99% accuracy with far fewer false negatives, and EfficientNet-B2 showed early signs of overfitting with a slight performance dip. B1 was identified as the capacity "sweet spot," which is why it anchors the production ensemble.
 
-\
+
 
 ## 📊 Dataset
 
@@ -117,7 +117,7 @@ The production backend serves an **ensemble of EfficientNet-B1 and EfficientNet-
 
 > The dataset itself is not distributed in this repository due to patient data sensitivity. See \[Installation](#-installation) for how to plug in your own trained weights.
 
-\
+
 
 ## 📈 Results
 
@@ -133,7 +133,7 @@ The production backend serves an **ensemble of EfficientNet-B1 and EfficientNet-
 
 Full methodology, comparative literature review, and error analysis are in the [research paper](#-research-paper).
 
-\---
+
 
 ## 🖼 Screenshots
 
@@ -149,7 +149,7 @@ Full methodology, comparative literature review, and error analysis are in the [
 |`docs/screenshots/Confusion Matrix.jpg`|Model prediction accuracy breakdown|
 |`docs/screenshots/Grad Cam Visualization.jpg`|Lesion-focused model explainability heatmaps|
 
-\
+
 
 ## 🛠 Tech Stack
 
@@ -171,7 +171,7 @@ Full methodology, comparative literature review, and error analysis are in the [
 * Groq API (Llama 3) for chat + daily tips
 * Pytest for backend tests
 
-\---
+
 
 ## 📄 Research Paper
 
@@ -189,7 +189,7 @@ The paper covers the full methodology: dataset curation, EfficientNet-B0/B1/B2 c
 
 If you use this work academically, please cite it — see [Citation](#-citation) below once you have finalized publication details (conference/journal, year, DOI).
 
-\---
+
 
 ## ⚙️ Installation
 
@@ -253,13 +253,13 @@ pytest
 
 > \*\*Note on model weights:\*\* `backend/models/\*.pth` is gitignored (see `.gitignore`) since trained weights on clinical data should not be committed to a public repo, especially without a data-use agreement. Either train your own using the methodology in the \[paper](#-research-paper), or host weights externally (e.g. Hugging Face Hub, Git LFS, or a release asset) and document the download step here.
 
-\---
+
 
 ## 📜 License
 
 This project is licensed under the [MIT License](LICENSE).
 
-\---
+
 
 ## 🙌 Acknowledgements
 
