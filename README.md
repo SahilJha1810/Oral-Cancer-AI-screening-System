@@ -137,15 +137,17 @@ Full methodology, comparative literature review, and error analysis are in the [
 
 ## 🖼 Screenshots
 
-> Add screenshots/GIFs of the app here once available — they make the biggest difference to how the repo is perceived. Suggested set:
 
 |Screen|Description|
 |-|-|
 |`docs/screenshots/Dashboard.jpg`|Home dashboard — scan trends, last scan summary, daily tip|
-|`docs/screenshots/Profile-Dashboard.jpg`|New scan capture/upload flow|
+|`docs/screenshots/Profile-Dashboard.jpg`|Profile Dashboard|
 |`docs/screenshots/Result.jpg`|Prediction result with risk level + Grad-CAM heatmap|
 |`docs/screenshots/Scan-History.jpg`|Scan history / patient timeline|
 |`docs/screenshots/Oral AI Assistant.jpg`|AI health assistant chat|
+|`docs/screenshots/Roc Curve.png`|ROC Curve|
+|`docs/screenshots/Confusion Matrix.jpg`|Model prediction accuracy breakdown|
+|`docs/screenshots/Grad Cam Visualization.jpg`|Lesion-focused model explainability heatmaps|
 
 \
 
